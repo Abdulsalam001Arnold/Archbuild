@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@1,100&family=Play&family=Poetsen+One&display=swap');
+
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,684 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 767px) {
+  .small-container {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 9px;
+    box-sizing: border-box;
+    background-color: black;
+  }
+}
+
+/* Media query for large screens */
+@media (min-width: 768px) {
+  .image-container {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    left: 0;
+    top: 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcfff4+0,dfe5d7+40,b3bead+100;Wax+3D+%233 */
+    background: linear-gradient(to bottom, rgba(39, 39, 38, 0.21) 0%, rgba(43, 44, 43, 0.21) 40%, rgba(35, 36, 34, 0.21) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+}
+  .text-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    transition: all .15s ease;
+  }
+  
+  .button::before,
+  .button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7D8082;
+    transition: all .15s ease;
+  }
+  
+  .button::before {
+    top: 0;
+    border-bottom-width: 0;
+  }
+  
+  .button::after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+  
+  .button:active,
+  .button:focus {
+    outline: none;
+  }
+  
+  .button:active::before,
+  .button:active::after {
+    right: 3px;
+    left: 3px;
+  }
+  
+  .button:active::before {
+    top: 3px;
+  }
+  
+  .button:active::after {
+    bottom: 3px;
+  }
+  
+  .button_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+  
+  .button_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+  }
+  
+  .button_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all .2s ease;
+  }
+  
+  .button_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #ffbb00;
+    transform: skew(-15deg);
+    transition: all .2s ease;
+  }
+  
+  .button_text {
+    position: relative;
+  }
+  
+  .button:hover {
+    color: #0f1923;
+  }
+  
+  .button:hover .button_sl {
+    width: calc(100% + 15px);
+  }
+  
+  .button:hover .button_lg::after {
+    background-color: #fff;
+  }
+  
+
+  .img-hero{
+    height: auto;
+    transition: transform 0.245s ease-in-out;
+  }
+
+  .img-hero:hover {
+    transform: scale(1.01); /* Adjust the zoom level */
+    outline: 1px solid black;
+}
+
+.flexed {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+}
+
+
+
+@media (min-width: 640px) { /* Adjust the breakpoint as needed */
+  .flexed {
+    flex-direction: column; /* Change flex direction to column on larger screens */
+  }
+}
+
+.title{
+  transition: 0.3s ease-in-out;
+}
+
+.title:hover{
+  color: rgb(198, 83, 12);
+}
+
+
+
+
+
+.content-display{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 10;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcfff4+0,dfe5d7+40,b3bead+100;Wax+3D+%233 */
+background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.9) 40%,rgba(255, 255, 255, 0.9) 20%,rgba(35, 36, 34, 0.21)); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.image-bg{
+  background: linear-gradient(to bottom, rgba(26, 26, 26, 0.45) 0%,rgba(14,14,14,0.45) 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+.bordered-text {
+  position: relative;
+}
+
+.bordered-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10px; /* Adjust this value to change the distance between text and border */
+  width: 1px; /* Width of the border */
+  background-color: black; /* Color of the border */
+}
+
+
+
+
+
+.image-containers {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: -79%; /* Initial position, hidden below the image */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Semi-transparent background */
+  transition: all 0.3s ease; /* Smooth transition effect */
+  color: white;
+}
+.overlay:hover{
+  background-color: white;
+  color: black;
+  border: 1px solid #ffa600;
+}
+
+
+
+.image-containers:hover .overlay {
+  bottom: 0; /* Move the overlay up to reveal hidden content on hover */
+}
+
+
+
+.link {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: rgb(232,32,17);
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+
+.link::before,
+.link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
+}
+
+.link::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.link::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.link:active,
+.link:focus {
+  outline: none;
+}
+
+.link:active::before,
+.link:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.link:active::before {
+  top: 3px;
+}
+
+.link:active::after {
+  bottom: 3px;
+}
+
+.large {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.large::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+}
+
+.large::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all .2s ease;
+}
+
+.small {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: black;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.letter {
+  position: relative;
+}
+
+.link:hover {
+  color: #0f1923;
+}
+
+.link:hover .small {
+  width: calc(100% + 15px);
+}
+
+.link:hover .large::after {
+  background-color: #fff;
+}
+
+.listed{
+  background-color: white;
+  padding: 1.5px;
+  border-radius: 50%;
+  width: fit-content;
+}
+
+.space-design{
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 5px #7D8082;
+}
+
+.box{
+  transition: all 0.3s ease-in-out;
+}
+
+.box:hover{
+  transform: scale(1.01);
+
+  box-shadow: 2px 6px 20px 4px rgba(59,59,59,0.75);
+-webkit-box-shadow: 2px 6px 20px 4px rgba(59,59,59,0.75);
+-moz-box-shadow: 2px 6px 20px 4px rgba(59,59,59,0.75);
+}
+
+.first{
+  border: red 2px solid;
+}
+
+.second{
+  border: 1px blue dashed;
+}
+
+.line{
+  background-color: black;
+  width: 1px;
+  height: 1.43rem;
+}
+
+.listing{
+  background-color: rgb(219, 219, 219);
+  padding: 6px;
+  border-radius: 50%;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.listing:hover{
+  cursor: pointer;
+  background-color: #ffa600;
+  color: white;
+}
+
+.border-line{
+  	background: rgb(209, 209, 209);
+    height: 1.56px;
+    border-radius: 4px;
+}
+
+.top-border{
+  background: rgb(0, 0, 0);
+    height: 1.56px;
+    border-radius: 4px;
+}
+
+
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.dancing-script-head {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.dancing-script-big {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.josefin-sans-p {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+
+.caveat-heading {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.caveat-logo {
+  font-family: "Caveat", cursive;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+.play-regular {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+.spinner {
+   position: absolute;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+   width: 1rem;
+   height: 1rem;
+}
+
+.spinner div {
+   position: absolute;
+   width: 50%;
+   height: 150%;
+   background: #e62d14;
+   transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+   animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
+}
+
+.spinner div:nth-child(1) {
+   --delay: 0.1;
+   --rotation: 36;
+   --translation: 150;
+}
+
+.spinner div:nth-child(2) {
+   --delay: 0.2;
+   --rotation: 72;
+   --translation: 150;
+}
+
+.spinner div:nth-child(3) {
+   --delay: 0.3;
+   --rotation: 108;
+   --translation: 150;
+}
+
+.spinner div:nth-child(4) {
+   --delay: 0.4;
+   --rotation: 144;
+   --translation: 150;
+}
+
+.spinner div:nth-child(5) {
+   --delay: 0.5;
+   --rotation: 180;
+   --translation: 150;
+}
+
+.spinner div:nth-child(6) {
+   --delay: 0.6;
+   --rotation: 216;
+   --translation: 150;
+}
+
+.spinner div:nth-child(7) {
+   --delay: 0.7;
+   --rotation: 252;
+   --translation: 150;
+}
+
+.spinner div:nth-child(8) {
+   --delay: 0.8;
+   --rotation: 288;
+   --translation: 150;
+}
+
+.spinner div:nth-child(9) {
+   --delay: 0.9;
+   --rotation: 324;
+   --translation: 150;
+}
+
+.spinner div:nth-child(10) {
+   --delay: 1;
+   --rotation: 360;
+   --translation: 150;
+}
+
+@keyframes spinner-fzua35 {
+   0%, 10%, 20%, 30%, 50%, 60%, 70%, 80%, 90%, 100% {
+      transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+   }
+
+   50% {
+      transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
+   }
+}
+
+
+
+
+
+.spin {
+  position: absolute;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 11.2px;
+  height: 11.2px;
+  border-radius: 11.2px;
+  box-shadow: 28px 0px 0 0 rgba(71,75,255,0.2), 22.7px 16.5px 0 0 rgba(71,75,255,0.4), 8.68px 26.6px 0 0 rgba(71,75,255,0.6), -8.68px 26.6px 0 0 rgba(71,75,255,0.8), -22.7px 16.5px 0 0 #474bff;
+  animation: spinner-b87k6z 1s infinite linear;
+}
+
+@keyframes spinner-b87k6z {
+  to {
+     transform: rotate(360deg);
+}
+}
+
+.linked{
+  border-radius: 40px;
+  transition: all 0.4s ease-in-out;
+}
+.vid-contain{
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  left: 0;
+  top: 0;
+}
+
+.content{
+  background: linear-gradient(to bottom, rgba(236,233,232, 0.75) 0%,rgba(236,233,232,0.75) 100%);
+}
+
+.career-links{
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.career-links:hover{
+  color: rgb(198, 83, 12);
+  text-decoration: underline;
+}
+
+.sub-title{
+  transition: all 0.35s ease-in-out;
+}
+
+.sub-title:hover{
+  color: rgb(198, 83, 12);
+}
+.color{
+  color: rgb(248, 174, 13); 
+}
+
+.loader{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 40%;
+  width: fit-content;
+  animation: zoomInOut 2s infinite;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.progress {
+  width: relative;
+  height: 8px;
+  background: linear-gradient(#000 0 0) left/0% 100% no-repeat
+      #dbdcef;
+  animation: progress-jgv380 2s infinite linear;
+}
+
+@keyframes progress-jgv380 {
+  100% {
+     background-size: 100% 100%;
+}
 }

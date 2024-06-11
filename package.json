@@ -3,12 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.16.2",
+    "aos": "^2.3.4",
+    "axios": "^1.6.8",
+    "fontawesome-5-icons-list": "^1.0.1",
+    "framer-motion": "^11.2.10",
+    "jquery": "^3.7.1",
+    "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.1.0",
+    "react-intersection-observer": "^9.10.2",
+    "react-lazyload": "^3.2.1",
+    "react-responsive": "^10.0.0",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.1",
+    "tailwindcss": "^3.4.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +50,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "^5.0.17",
+    "@fontsource/cardo": "^5.0.12",
+    "@types/jquery": "^3.5.29"
   }
 }
