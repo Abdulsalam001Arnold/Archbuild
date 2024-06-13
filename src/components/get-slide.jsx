@@ -1,38 +1,67 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import AOS from 'aos';
+import { useMediaQuery } from 'react-responsive';
+import {motion} from 'framer-motion'
 import 'swiper/swiper-bundle.css';
-import { http } from "../components/axios";
 import 'swiper/css';
 import 'swiper/css/navigation';
-
 
 export default function GetSlide() {
     const { slideId } = useParams(); // Get the project ID from the URL
     const [slide, setSlide] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const isBigScreen = useMediaQuery({ query: '(min-width: 1024px)' });
 
 
 
     useEffect(() => {
-        if(slideId)
-        // Fetch the project details using the projectId
-        http.get(`/itemList/${slideId}`)
-            .then(res => {
-                setSlide(res.data);
-            })
-            .catch(error => {
-                console.error("Error fetching project:", error);
-            });
+        if (slideId) {
+            fetch(`https://archbuild-api.vercel.app/api/itemList/${slideId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    setSlide(data.data);
+                    setLoading(false);
+                })
+                .catch(error => {
+                    setError(error.message);
+                    setLoading(false);
+                });
+        }
+
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: false, // Whether animation should happen only once
+          });
     }, [slideId]);
 
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+        return <p>Error: {error}</p>;
+    }
 
     return (
-        <div className="w-full mt-[5rem]">
+        <div className="w-full mt-[5rem] px-2">
             {slide ? (
-                <div className="">
+                <div className=""
+                data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+                data-aos-offset={isBigScreen ? '10' : '2'}>
                     <div className="w-full flex-none lg:flex lg:justify-center">
                     <div className="relative">
-                        <img src={slide.imgUrl} alt={slide.title}className="sm:w-full md:w-full lg:w-[40rem]" />
+                        <motion.img src={slide.imgUrl} alt={slide.title}className="sm:w-full md:w-full lg:w-[40rem]" 
+                            initial={{opacity: 0}}   
+                         animate={{opacity: 1}}
+                         transition={{duration: 2, ease: 'easeOut', stiffness: 300}}
+                        />
                         <h1 className="absolute z-20 bottom-[5rem] left-[6px] text-white text-lg lg:text-2xl font-bold">
                             {slide.title}
                         </h1>

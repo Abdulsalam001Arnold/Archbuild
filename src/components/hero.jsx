@@ -1,11 +1,26 @@
 import { motion } from 'framer-motion'
-
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
+import { useMediaQuery } from 'react-responsive';
 
 export default function Hero(){
-    return (
-        <div className="w-full flex flex-col items-center mt-[2rem] md:mt-[4rem] lg:mt-[8rem] mb-[2rem] md:mb-[4rem] lg:mb-[8rem] justify-center">
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: false, // Whether animation should happen only once
+          });
+    }, [])
 
-        <div className='w-full flex flex-col lg:flex-row justify-center gap-4 mb-[1rem] md:mb-[10px] lg:mb-[2rem]'>
+    const isBigScreen = useMediaQuery({ query: '(min-width: 1024px)' });
+    return (
+        <div className="w-full flex flex-col items-center mt-[2rem] md:mt-[4rem] lg:mt-[8rem] mb-[2rem] md:mb-[4rem] lg:mb-[8rem] justify-center"
+        data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+        data-aos-offset={isBigScreen ? '10' : '2'}>
+
+        <div className='w-full flex flex-col lg:flex-row justify-center gap-4 mb-[1rem] md:mb-[10px] lg:mb-[2rem] px-2'
+        data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+            data-aos-offset={isBigScreen ? '10' : '2'}>
             <div className=''>
                 <motion.img src="https://static2.gensler.com/uploads/image/88612/df24-designing-for-impact-1024x576_1698867226.jpg" alt="company" className="sm:w-full md:w-[23rem] lg:w-[27rem]" 
                 initial={{opacity: 0}} 
@@ -21,7 +36,9 @@ export default function Hero(){
         </div>
 
 
-        <div className=' w-full flex flex-col md:flex-col lg:flex-row-reverse justify-center gap-4 mt-3'>
+        <div className=' w-full flex flex-col md:flex-col lg:flex-row-reverse justify-center gap-4 mt-3 px-2'
+        data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+        data-aos-offset={isBigScreen ? '10' : '2'}>
             <div className=''>
                 <motion.img src="https://static1.gensler.com/uploads/image/90696/Fleet-Street-area-of-opportunity_1024_1710365311.jpg" alt="company" className="sm:w-full md:w-[23rem] lg:w-[27rem]"
                     initial={{opacity: 0}} 

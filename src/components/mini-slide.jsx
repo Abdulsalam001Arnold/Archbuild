@@ -1,21 +1,22 @@
 import React, {useState, useEffect} from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import { GrFormNextLink } from "react-icons/gr";
-import { GrFormPreviousLink } from "react-icons/gr";
-import 'swiper/css/navigation';
 import { Link } from "react-router-dom"; // Import Link from react-router-dom for navigation
-import { http } from "../components/axios";
 import LazyLoad from 'react-lazyload';
-// Import Swiper styles
-import 'swiper/css';
+import AOS from 'aos';
+import { useMediaQuery } from 'react-responsive';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y  } from "swiper/modules";
 import {motion} from 'framer-motion'
 
 
 
 export default function Carousel() {
-    const[itemList, setItemlist] = useState(null)
-    const [swiper, setSwiper] = useState(null);
+    const[itemList, setItemlist] = useState([])
+    const [loading, setLoading] = useState(true);
+    const isBigScreen = useMediaQuery({ query: '(min-width: 1024px)' });
     const [slidesPerView, setSlidesPerView] = useState(getSlidesPerView());
     
 
@@ -23,47 +24,65 @@ export default function Carousel() {
       return window.innerWidth < 768 ? 1 : 3;
   }
 
-    useEffect(() => { // Set loading state to true before fetching data
-      http.get('/itemList') // Assuming '/projectList' is the correct endpoint
-          .then(res => {
-            setItemlist(res.data);
-          });
+  useEffect(() => { // Set loading state to true before fetching data
+    const fetchData = async () => {
+        const url = 'https://archbuild-api.vercel.app/api/itemList';
 
+        try {
+            setLoading(true); // Set loading state to true before fetching data
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('Fetched data:', data);
+
+            if (Array.isArray(data.data)) {
+              setItemlist(data.data);
+            } else {
+                console.error('Fetched data is not an array:', data.data);
+                setItemlist([]);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        } finally {
+            setLoading(false); // Set loading state to false after fetching data
+        }
+    };
+
+    fetchData();
+
+    AOS.init({
+        duration: 1000, // Animation duration
+        once: false, // Whether animation should happen only once
+      });
       const handleResize = () => {
         setSlidesPerView(getSlidesPerView());
     };
     window.addEventListener('resize', handleResize);
-    
-    return () => {
-        window.removeEventListener('resize', handleResize);
-    };
-    }, [])
-    const handleNext = () => {
-      if (swiper) {
-          swiper.slideNext();
-      }
-  };
-  const handlePrev = () => {
-    if (swiper) {
-        swiper.slidePrev();
-    }
-};
+}, []);
+
 
 
 
 
     return(
-        <div className='w-[100%] mb-[2rem] md:mb-[4rem] lg:mb-[6rem]'>
+        <div className='w-[100%] mb-[2rem] md:mb-[4rem] lg:mb-[6rem]'
+        data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+        data-aos-offset={isBigScreen ? '10' : '2'}>
           <Swiper
-          modules={[Navigation]}
-          navigation={false}
-      spaceBetween={30}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+      navigation={true}
+      pagination={true}
       slidesPerView={slidesPerView}
-      onSwiper={setSwiper}
+      slides-per-view={1}
+       spaceBetween={30}
 
     >
   
-      {itemList && itemList.map((item, index) => (
+      {itemList.length > 0 ? (itemList.map((item, index) => (
         <SwiperSlide key={index} className='w-[100%]'>
         <LazyLoad once={true} offset={100} height={100}>
         <Link key={index} to={`/blog`} className='hover:no-underline'>
@@ -84,16 +103,15 @@ export default function Carousel() {
         </Link>
 </LazyLoad>
         </SwiperSlide>
-      ))
+      ))) : (
+                    !loading && <div>No data available</div>
+                )
         
       }
       
 
     </Swiper>
-    <div className='flex justify-center'>
-                <button onClick={handlePrev} className='mr-4'><GrFormPreviousLink className='text-4xl' /></button>
-                <button onClick={handleNext}><GrFormNextLink className='text-4xl' /></button>
-            </div>
+    
         </div>
     )
 }

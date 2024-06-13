@@ -24,7 +24,7 @@ export default function Message() {
 
             </div>
 
-            <div className='w-full mt-[1rem] md:mt-[1.45rem] lg:mt-[2rem]'>
+            <div className='w-full mt-[1rem] md:mt-[1.45rem] lg:mt-[2rem] px-2'>
                 <div className='w-full flex flex-col md:flex-col lg:flex-row items-start justify-center mb-[1rem] md:mb-[1.45rem] lg:mb-[2rem] gap-4'>
                     <motion.img src='https://www.nikken.co.jp/en/about/p4iusj0000000yx0-img/ceo_profile.jpg' alt='ceo' className='sm:w-full md:w-full lg:w-[30rem]'
                         initial={{opacity: 0}}   

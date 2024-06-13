@@ -101,7 +101,7 @@ Image courtesy of The Sumitomo Warehouse Co., Ltd.
 
         </div>
 
-        <div className="mt-[4rem] w-full flex flex-col items-center justify-center">
+        <div className="mt-[4rem] w-full flex flex-col items-center justify-center px-2">
             <div className="justify-center sm:w-full md:w-full px-2 lg:w-[50rem]">
                 <h3 className="sm:text-2xl md:text-3xl lg:text-3xl josefin-sans-p">
                 The Inherited Cycle of "Needs," "Projects," and "Contributions”
@@ -113,7 +113,7 @@ Image courtesy of The Sumitomo Warehouse Co., Ltd.
             </div>
         </div>
 
-        <div className='w-full bg-[rgb(245,245,245)] mt-[2rem] md:mt-[3rem] lg:mt-[4rem] py-[5rem]'>
+        <div className='w-full bg-[rgb(245,245,245)] mt-[2rem] md:mt-[3rem] lg:mt-[4rem] py-[5rem] px-2'>
 
         <div className='w-full flex flex-col md:flex-col lg:flex-col items-center justify-center'
         data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
@@ -158,7 +158,7 @@ Image courtesy of The Sumitomo Warehouse Co., Ltd.
 
                     <div className='flex flex-col justify-center items-center'>
             <div className='flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]'>
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/tg1is20000004gxc.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/tg1is20000004gxc.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold title dancing-script-big">[Osaka Library: (Present) Osaka Prefectural Nakanoshima Library, 1904.]</h3>
                   
@@ -170,7 +170,7 @@ Image Source: Yutaka Hidaka (1920) "Dr. Noguchi Architectural Drawing Collection
 
 
               <div className='flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]'>
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_02.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_02.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold title dancing-script-big">[The Sumitomo Building (now the headquarters of Sumitomo Mitsui Banking Corporation) when it was built in 1930.]</h3>
                   
@@ -221,7 +221,7 @@ Image courtesy of Sumitomo Historical Archives​</p>
                     </div>
 
                     <div className='flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]'>
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_03.jpg' alt='map' className='w-[21rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_03.jpg' alt='map' className='w-[21rem] h-auto flex-shrink-0' />
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold title dancing-script-big">[Map of Osaka’s North Port]</h3>
                   
@@ -237,7 +237,7 @@ Source: Osaka Hokko Co. Ltd. (ed.), Twenty Years of Osaka Hokko.​</p>
 
 
 
-        <div className="w-full sm:mt-[3rem] md:mt-[4rem] lg:mt-[4rem] flex flex-col items-center justify-center"
+        <div className="w-full sm:mt-[3rem] md:mt-[4rem] lg:mt-[4rem] flex flex-col items-center justify-center px-2"
         data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
         data-aos-offset={isBigScreen ? '10' : '2'}>
 
@@ -273,7 +273,7 @@ Source: Osaka Hokko Co. Ltd. (ed.), Twenty Years of Osaka Hokko.​</p>
                     </div>
                     
                     <div className='flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]'>
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_04.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_04.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold title dancing-script-big">[Map of Osaka’s North Port]</h3>
                   
@@ -316,7 +316,7 @@ Source: Osaka Hokko Co. Ltd. (ed.), Twenty Years of Osaka Hokko.​</p>
 
                 <div className="flex flex-col justify-center items-center">
                 <div className='flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]'>
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_05.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_05.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold title dancing-script-big">[University of the Sacred Heart, Tokyo, 1950-1959]</h3>
                   
@@ -325,7 +325,7 @@ Source: Osaka Hokko Co. Ltd. (ed.), Twenty Years of Osaka Hokko.​</p>
               </div>
 
               <div className='flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]'>
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_06.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_06.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold title dancing-script-big">[Joshigakuin, 1950-1955]</h3>
                   
@@ -386,7 +386,7 @@ Photo by kuremo - stock.adobe.com
 
                 <div className="flex flex-col justify-center items-center">
                 <div className='flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]'>
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/tg1is20000004cbi.png' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/tg1is20000004cbi.png' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Palaceside Building, 1966]</h3>
                   
@@ -400,7 +400,7 @@ Photo by kuremo - stock.adobe.com
                 </div>
 
                 <div className="flex flex-col md:flex-col lg:flex-row items-start justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/tg1is20000004cc0.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/tg1is20000004cc0.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Hyakujushi Building / Hyakujushi Bank Head Office 1966]</h3>
@@ -445,7 +445,7 @@ Photo by kuremo - stock.adobe.com
 
                 <div className="flex flex-col justify-center items-center">
                 <div className='flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]'>
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_01.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_01.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[National Labor Youth Center (now Nakano Sunplaza), 1973]</h3>
                   
@@ -457,7 +457,7 @@ Photo by kuremo - stock.adobe.com
                 </div>
 
                 <div className="flex flex-col md:flex-col lg:flex-row items-start justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_02.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_02.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Tokyo Dome, 1988]</h3>
@@ -499,7 +499,7 @@ Photo by kuremo - stock.adobe.com
         </div>
 
         <div className="flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_03.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_03.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Osaka Business Park, 1970s - ]</h3>
@@ -547,7 +547,7 @@ Photo by kuremo - stock.adobe.com
 
         <div className="flex flex-col items-center justify-center gap-4">
         <div className="flex flex-col md:flex-col lg:flex-row items-start justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_05.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_05.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Central Japan International Airport "Centrair" Passenger Terminal Building, 2004]</h3>
@@ -564,7 +564,7 @@ Photo by kuremo - stock.adobe.com
 
 
                 <div className="flex flex-col md:flex-col lg:flex-row items-start justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_06.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_06.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Kansai International Airport Passenger Terminal Building, 1994]</h3>
@@ -583,7 +583,7 @@ Photo by kuremo - stock.adobe.com
                 </div>
 
                 <div className="flex flex-col md:flex-col lg:flex-row items-start justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_04.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_04.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Narita International Airport, 1978-]</h3>
@@ -599,7 +599,7 @@ Photo by kuremo - stock.adobe.com
                 </div>
 
                 <div className="flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_07.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_07.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Islamic Development Bank Headquarters Building, 1993]</h3>
@@ -645,7 +645,7 @@ Photo by kuremo - stock.adobe.com
 
         <div className="flex flex-col items-center justify-center gap-4">
         <div className="flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_08.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_08.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Tokyo Midtown, 2007]</h3>
@@ -661,7 +661,7 @@ Photo by kuremo - stock.adobe.com
                 </div>
 
                 <div className="flex flex-col md:flex-col lg:flex-row items-start justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_09.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_09.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Tokyo Midtown Grass Square]</h3>
@@ -677,7 +677,7 @@ Photo by kuremo - stock.adobe.com
                 </div>
 
                 <div className="flex flex-col md:flex-col lg:flex-row items-start justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_10.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_10.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Nakanoshima Area, 2012-2017]</h3>
@@ -726,7 +726,7 @@ Photo by kuremo - stock.adobe.com
         </div>
 
         <div className="flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_11.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_11.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Japanese Red Cross Ishinomaki Hospital, 2011]</h3>
@@ -741,7 +741,7 @@ Photo by kuremo - stock.adobe.com
                 </div>
 
                 <div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_12.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_12.jpg' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Escape Map]</h3>
@@ -786,7 +786,7 @@ Photo by kuremo - stock.adobe.com
 
           <div className='flex flex-col items-center justify-center gap-4'>
           <div className="flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_13.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_13.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Shibuya Redevelopment Project]</h3>
@@ -802,7 +802,7 @@ Photo by kuremo - stock.adobe.com
                 </div>
 
                 <div className="flex flex-col items-center justify-center mb-[1.56rem] overflow-hidden w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_14.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_14.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Grand Front Osaka, 2013]</h3>
@@ -847,7 +847,7 @@ Photo by kuremo - stock.adobe.com
 
         <div className="flex flex-col items-center justify-center gap-4">
         <div className="flex flex-col items-start justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_15.png' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_15.png' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Mizunamikita Junior High School, 2018]</h3>
@@ -865,7 +865,7 @@ Photo by kuremo - stock.adobe.com
 
 
                 <div className="flex flex-col items-start justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_16.png' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_16.png' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[NBF Osaki Building, 2011]</h3>
@@ -881,7 +881,7 @@ Photo by kuremo - stock.adobe.com
                 </div>
 
                 <div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_17.png' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_17.png' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Tokyo Gas Earth Port, 1996 and 2010]</h3>
@@ -929,7 +929,7 @@ Photo by kuremo - stock.adobe.com
 
         <div className="flex flex-col items-center justify-center gap-4">
         <div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_18.png' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_18.png' alt='map' className='sm:w-[25rem] md:w-[25rem] lg:w-[9rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Chongqing Shapingba Station Complex Development, 2020]</h3>
@@ -949,7 +949,7 @@ Photo by kuremo - stock.adobe.com
                 </div>
 
                 <div className="flex flex-col items-start justify-center gap-2 w-[25rem]">
-                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_19.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0 img-hero' />
+                <img src='https://www.nikken.co.jp/en/about/p4iusj00000011cd-img/projects_history_p2_19.jpg' alt='map' className='w-[25rem] h-auto flex-shrink-0' />
 
                 <div className="mt-[0.5rem]">
                   <h3 className="text-lg font-bold text-blue-400 dancing-script-big">[Shenzhen Xili Comprehensive Transportation Hub, scheduled for 2025 completion]</h3>

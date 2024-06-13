@@ -24,7 +24,7 @@ export default function Join() {
 
 
     return(
-        <div className="w-[100%] bg-black text-white">
+        <div className="w-[100%] bg-black text-white px-2">
             <motion.div className="flex flex-col lg:flex-row items-center justify-center gap-7" 
             initial={{opacity: 0}} 
                 animate={{opacity: 1}} 

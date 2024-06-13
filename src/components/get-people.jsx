@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import 'swiper/swiper-bundle.css';
-import { http } from "../components/axios";
 import { TiSocialLinkedin } from "react-icons/ti";
+import AOS from 'aos';
+import { useMediaQuery } from 'react-responsive';
 import { IoIosMail } from "react-icons/io";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { motion } from "framer-motion";
@@ -10,23 +10,49 @@ import { motion } from "framer-motion";
 export default function PeopleDetail() {
     const { peopleId } = useParams(); // Get the project ID from the URL
     const [people, setPeople] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const isBigScreen = useMediaQuery({ query: '(min-width: 1024px)' });
 
     useEffect(() => {
-        if(peopleId)
-        // Fetch the project details using the projectId
-        http.get(`/peopleList/${peopleId}`)
-            .then(res => {
-                setPeople(res.data);
-            })
-            .catch(error => {
-                console.error("Error fetching project:", error);
-            });
+        if (peopleId) {
+            fetch(`https://archbuild-api.vercel.app/api/peopleList/${peopleId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    setPeople(data.data);
+                    setLoading(false);
+                })
+                .catch(error => {
+                    setError(error.message);
+                    setLoading(false);
+                });
+        }
+
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: false, // Whether animation should happen only once
+          });
     }, [peopleId]);
 
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+        return <p>Error: {error}</p>;
+    }
+    
     return(
         <div className="w-full mt-[5rem] mb-[2rem] md:mb-[2.3rem] lg:mb-[3rem]">
             {people ? (
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center"
+                data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+                    data-aos-offset={isBigScreen ? '10' : '2'}>
                 <div className="flex-none lg:flex lg:justify-center mb-[9px] lg:mb-[1rem]">
                     
                         <motion.img src={people.image} alt={people.name} className="sm:w-full md:w-[23rem] lg:w-[30rem]"
@@ -35,7 +61,9 @@ export default function PeopleDetail() {
                          transition={{duration: 2, ease: 'easeOut', stiffness: 300}}
                         />
                     </div>
-                <div className="w-full px-0 lg:w-[40rem] flex flex-col md:flex-col lg:flex-row md:items-center lg:items-start gap-5 items-start">
+                <div className="w-full px-0 lg:w-[40rem] flex flex-col md:flex-col lg:flex-row md:items-center lg:items-start gap-5 items-start"
+                data-aos={isBigScreen ? 'fade-up' : 'fade-up'}
+                data-aos-offset={isBigScreen ? '10' : '2'}>
                     <div className="w-full items-start">
                     <h1 className="inline text-lg font-[12px] md:text-xl lg:text-2xl mb-[9px] lg:mb-[1rem] poetsen-one-regular">
                         {people.name}

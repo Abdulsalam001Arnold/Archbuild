@@ -6,7 +6,6 @@ import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y  } from "swiper/modules";
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 
 
@@ -15,7 +14,7 @@ import { motion } from 'framer-motion';
     
   
       return (
-        <>
+        <div className='mt-[5rem] md:mt-[4rem] lg:mt-[1rem]'>
     
 
         <Swiper 
@@ -141,7 +140,7 @@ Ideas Redefining Cities</h1>
       </SwiperSlide>
 
     </Swiper>
-    </>
+    </div>
       )
   };
   export default Slide;
